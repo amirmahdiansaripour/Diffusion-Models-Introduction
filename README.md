@@ -17,6 +17,8 @@ Now we face the main obstacle. How do we get back from pure noise to the input i
 
 Reference Paper: https://arxiv.org/abs/2006.11239
 
+Source Code: https://medium.com/mlearning-ai/enerating-images-with-ddpms-a-pytorch-implementation-cef5a2ba8cb1
+
 In this architecture, we try to estimate the noise previously added in the $t$ th step of the forward trajectory, i.e., $\epsilon$ in $x_t = \sqrt{\bar{\alpha_t}} x_0 + \sqrt{(1 - \bar{\alpha_t})}\epsilon$. So we use a nueral network $\epsilon_{\theta}(x_t, t)$ in the $t$ th step with the following loss function: 
 
 $${\theta}^* = argmin_{\theta} || \epsilon_t - \epsilon_{\theta}(x_t, t) ||$$
