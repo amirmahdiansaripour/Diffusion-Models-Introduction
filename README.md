@@ -25,7 +25,7 @@ Note that we already have $x_t$ when constructing $x_{t-1}$ in the backward traj
 
 ![img0](./images/c2.JPG)
 
-### The Second Approach: Minimizing KL Divergence Between q(x(t-1) | x(t), x(0))$ and p(x(t-1) | x(t))
+### The Second Approach: Minimizing KL Divergence Between q(x(t-1) | x(t), x(0)) and p(x(t-1) | x(t))
 
 Reference Paper: https://arxiv.org/abs/1503.03585
 
