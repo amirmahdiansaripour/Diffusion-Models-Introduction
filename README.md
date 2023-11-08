@@ -33,7 +33,8 @@ Based on the loss function, the training algorithm becomes:
 
 #### Inference Step: 
 
-Note that we already have $x_t$ when constructing $x_{t-1}$ in the backward trajectory. ( $p_{\theta}(x_{t-1} | x_t)$ )
+When the image has learned how to reduce the proper amount of noise from a noisy image ($x_t$) given the current step ($t$), we enter the inference step: 
+
 
 ![img0](./images/c2.JPG)
 
