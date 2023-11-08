@@ -33,10 +33,11 @@ Based on the loss function, the training algorithm becomes:
 
 #### Inference Step: 
 
-When the image has learned how to reduce the proper amount of noise from a noisy image ($x_t$) given the current step ($t$), we enter the inference step: 
+When the image has learned how to reduce the proper amount of noise from a noisy image ($x_t$) given the current step ($t$), we enter the inference or sampling step: 
 
+![img1](./images/Capture13.JPG)
 
-![img0](./images/c2.JPG)
+![img2](./images/c2.JPG)
 
 ### The Second Approach: Minimizing KL Divergence Between q(x(t-1) | x(t), x(0)) and p(x(t-1) | x(t))
 
