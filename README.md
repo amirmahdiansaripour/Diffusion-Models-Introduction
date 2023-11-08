@@ -29,7 +29,7 @@ $${\theta}^* = argmin_{\theta} || \epsilon - \epsilon_{\theta}(\sqrt{\bar{\alpha
 
 Based on the loss function, the training algorithm becomes: 
 
-
+![img0](./images/Capture12.JPG)
 
 #### Inference Step: 
 
