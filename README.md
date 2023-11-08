@@ -19,9 +19,14 @@ Reference Paper: https://arxiv.org/abs/2006.11239
 
 Source Code: https://medium.com/mlearning-ai/enerating-images-with-ddpms-a-pytorch-implementation-cef5a2ba8cb1
 
+#### Training Step:
+
 In this architecture, we try to estimate the noise previously added to $x_0$ which has led to $x_t$. In other words, we try to estimate $\epsilon$ in $x_t = \sqrt{\bar{\alpha_t}} x_0 + \sqrt{(1 - \bar{\alpha_t})}\epsilon$. To do so, we train a nueral network $\epsilon_{\theta}(x_t, t)$ which gets the noisy image $x_t$ and the time step $t$ as inputs, and outputs a random noise predicting $\epsilon$. Hence, the loss function can be written as: 
 
 $${\theta}^* = argmin_{\theta} || \epsilon_t - \epsilon_{\theta}(x_t, t) ||$$
+
+
+#### Inference Step: 
 
 Note that we already have $x_t$ when constructing $x_{t-1}$ in the backward trajectory. ( $p_{\theta}(x_{t-1} | x_t)$ )
 
