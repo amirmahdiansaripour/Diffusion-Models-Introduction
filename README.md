@@ -21,9 +21,14 @@ Source Code: https://medium.com/mlearning-ai/enerating-images-with-ddpms-a-pytor
 
 #### Training Step:
 
-In this architecture, we try to estimate the noise previously added to $x_0$ which has led to $x_t$. In other words, we try to estimate $\epsilon$ in $x_t = \sqrt{\bar{\alpha_t}} x_0 + \sqrt{(1 - \bar{\alpha_t})}\epsilon$. To do so, we train a nueral network $\epsilon_{\theta}(x_t, t)$ which gets the noisy image $x_t$ and the time step $t$ as inputs, and outputs a random noise predicting $\epsilon$. Hence, the loss function can be written as: 
+In this architecture, we try to estimate the noise previously added to $x_0$ which has led to $x_t$. In other words, we try to estimate $\epsilon$ in $x_t = \sqrt{\bar{\alpha_t}} x_0 + \sqrt{(1 - \bar{\alpha_t})}\epsilon$. To do so, we train a nueral network $\epsilon_{\theta}(x_t, t)$ which gets the noisy image $x_t$ and the time step $t$ as inputs, and outputs a random noise predicting $\epsilon$. 
+
+Hence, the loss function can be written as: 
 
 $${\theta}^* = argmin_{\theta} || \epsilon - \epsilon_{\theta}(\sqrt{\bar{\alpha_t}} x_0 + \sqrt{1-\bar{\alpha_t}} \epsilon, t) ||$$
+
+Based on the loss function, the training algorithm becomes: 
+
 
 
 #### Inference Step: 
